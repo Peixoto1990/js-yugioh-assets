@@ -1,0 +1,73 @@
+.bg-video {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-video .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bg-video::after {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    top: inherit;
+    left: inherit;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+    content: "";
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.container__left {
+    width: 35%;
+    min-width: 300px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.score_box {
+    background-color: #fff;
+    padding: 30px;
+}
+
+.frame {
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.card_details {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    width: 100%;
+}
+
+#card-name {
+    font-size: .8rem;
+}
+
+#card-type {
+    font-size: 1rem;
+}
