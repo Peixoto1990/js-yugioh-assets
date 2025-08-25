@@ -1,3 +1,30 @@
+body {
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+button, a, button:hover, img:hover, a:hover {
+    cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+}
+
+#startGame__container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+
+#startGame {
+    position: fixed;
+    z-index: 6;
+    text-transform: uppercase;
+    width: max-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .bg-video {
     position: fixed;
     width: 100%;
@@ -13,7 +40,7 @@
 .bg-video .video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
@@ -38,6 +65,7 @@
 .container__left {
     width: 35%;
     min-width: 300px;
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
@@ -87,10 +115,10 @@
 .card-versus__container {
     display: flex;
     flex-flow: column nowrap;
-    padding-top: .1rem;
+    justify-content: center;
+    align-items: center;
     height: 300px;
     gap: 1rem;
-    margin-top: 5rem;
 }
 
 .versus-top, .versus-bottom {
@@ -101,6 +129,7 @@
 
 #next-duel {
     display: none;
+    text-transform: uppercase;
 }
 
 .card-box {
@@ -116,4 +145,27 @@
     height: 11.2rem;
     width: 8rem;
     border-radius: 8px;
+    border: 1px solid #fff;
+}
+
+#player-field-card, #computer-field-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.card {
+    transition: .2s transform ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
+
+audio {
+    opacity: 0;
+    position: absolute;
+    z-index: -4;
+    top: 0;
+    left: 0;
 }
